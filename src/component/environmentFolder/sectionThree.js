@@ -1,15 +1,12 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoPlayer from "react-video-js-player";
+// import VideoPlayer from "react-video-js-player";
 import MediaQuery from 'react-responsive'
-import video from "../../video/video1.mp4";
-import poster from '../../images/guneshsistemi.png';
+import { Link} from 'react-router-dom'
 
-
-const SectionThree = (props) =>{
-  const { id,  Description_2, Video, text_2, } = props.data
+const SectionThree = ({data,myRef,blog}) =>{
+  const { id,  Description_2,  text_2, scineceBlog, image_2} = data
   // console.log(id)
-  const videoSrc = video;
   return(
     <article className="section-3-main-div home-folder">
       
@@ -17,17 +14,27 @@ const SectionThree = (props) =>{
         <div className="container-fluid">
           <div className="row" >
 
-            <div  className="text-box col-md-6 col-sm-12 col-12">
-              <VideoPlayer 
-              src={Video} poster={poster} className="video"   
-              />
+            <div  className="text-box col-md-6 col-sm-12 col-12" ref={myRef}>
+              <img src={image_2} alt='img' ></img>
             </div>
 
             <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
               <div className='png' ></div>
               <h2>{Description_2}</h2>
               <p>{text_2}</p>
-              <button className="section-3-button">Davami</button>
+              {
+                blog.map((blog,index) =>{
+    
+                const {name} = blog
+                if(name === scineceBlog){
+                  return(
+                    <Link to={{pathname:`/blog/${name}`, }} key={index} >
+                      <button className="section-3-button">Davami</button>
+                    </Link>
+                  )
+                  }
+                })
+              }
               
             </div>
 
@@ -42,9 +49,7 @@ const SectionThree = (props) =>{
               <div className="col-md-12 col-sm-12 section-3-for-mobile" >
                 
                 
-                  <VideoPlayer 
-                    src={videoSrc} poster={poster} className="video"   
-                  />
+                  <img src={image_2} alt='img' ></img>
                 
                 
                 <p>Hey dostlar, salam! Bu gün müxtəlif peşələr haqqında maraqlı bir kitab oxudum. 

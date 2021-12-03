@@ -1,5 +1,5 @@
 import {useSpring, animated} from 'react-spring'
-import  {React, useEffect, useState } from 'react' 
+import  {React, useEffect, useState,useRef } from 'react' 
 import { Link} from 'react-router-dom'
 import leaf from '../../images/leaf.png'
 import brush from '../../images/brush.png'
@@ -11,10 +11,10 @@ import FooterSection from '../homeFolder/footerSection'
 // import { useSelector } from 'react-redux'
 import Alldata from '../../course'
 
-
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
 const Environment = (props) =>{
-	console.log(props)
-
+	const myRef = useRef(null)
+	const executeScroll = () => scrollToRef(myRef)
 	// let state = useSelector(state => state.allData)
 
 	const [screenSize, getDimension] = useState({
@@ -45,6 +45,7 @@ const Environment = (props) =>{
 	let name
 	let data 
 	let Course = Alldata.Course
+	let blog = Alldata.blog
 	if(location && location.name !== 'fromSkill' && location.name !== 'fromTechnology'){
 		const Course = Alldata.Course
 			Course.map((subject, index) => {
@@ -147,7 +148,7 @@ const Environment = (props) =>{
 			location.name === 'fromTechnology' ? 
 			'37px' : '37px' : '37px'   :    location ? 
 			location.name === 'fromTechnology' ?
-			'117px' : '117px' : '117px'
+			'97px' : '97px' : '97px'
 		,	
 		}],
   		from: {right: location ?
@@ -217,9 +218,9 @@ const Environment = (props) =>{
 					
 					
 				</div>
-				<SectionOne data={data}  />
+				<SectionOne data={data} executeScroll={executeScroll} />
 				<SectionTwo data={Course} />
-				<SectionThree data={data} />
+				<SectionThree data={data} myRef={myRef} blog={blog} />
 				<FooterSection data={Course} />
 		</article>					
 

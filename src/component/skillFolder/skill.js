@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import { Link} from 'react-router-dom'
 import {useSpring, animated} from 'react-spring'
 import leaf from '../../images/leaf.png'
@@ -12,12 +12,15 @@ import FooterSection from '../homeFolder/footerSection'
 import allData from '../../course.js'
 
 
-
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
 const Skill =(props)=>{
+	const myRef = useRef(null)
 	const [screenSize, getDimension] = useState({
     dynamicWidth: window.innerWidth,
     dynamicHeight: window.innerHeight
   });
+
+	const executeScroll = () => scrollToRef(myRef)
 
 	const setDimension = () => {
     getDimension({
@@ -43,6 +46,7 @@ const Skill =(props)=>{
 	let name
 	let data 
 	let Course = allData.Course
+	let blog = allData.blog
 	if(location && location.name !== 'fromEnvironment' && location.name !== 'fromTechnology'){
 		const Course = allData.Course
 			Course.map((subject, index) => {
@@ -227,9 +231,9 @@ const Skill =(props)=>{
 					</animated.div>
 					</animated.div>
 				</article>
-				<SectionOne data={data}  />
+				<SectionOne data={data} executeScroll={executeScroll} />
 				<SectionTwo data={Course}/>
-				<SectionThree data={data} />
+				<SectionThree data={data} myRef={myRef} blog={blog} />
 				<FooterSection data={Course} />
 			</>
     )

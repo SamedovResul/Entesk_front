@@ -176,9 +176,6 @@ const enteskStyle = useSpring({
 									Tədris Proqramları
 								</Link>
 								</li>
-
-							<li>
-							</li>
 							<li>
 								<Link to={{
 									pathname: '/About',

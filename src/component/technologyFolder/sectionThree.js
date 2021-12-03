@@ -4,14 +4,23 @@ import VideoPlayer from "react-video-js-player";
 import MediaQuery from 'react-responsive'
 import video from "../../video/video1.mp4";
 import poster from '../../images/guneshsistemi.png';
-const SectionThree = (props) =>{
-  const { id,  Description_2, Video, text_2, } = props.data
-  // console.log(id)
+import { Link} from 'react-router-dom'
+
+
+const SectionThree = ({data,myRef,blog}) =>{
+  
+
+  const { id,  Description_2, Video, text_2, technologyBlog, image_2 } = data
+
+  
+
+
+  // console.log(myRef.current.offsetTop)
   const videoSrc = video;
   return(
-    <article className="section-3-main-div home-folder ">
+    <article className="section-3-main-div home-folder " >
       
-      <div key={id} className="container bigScreenContainer">
+      <div key={id} className="container bigScreenContainer" >
         <div className="container-fluid">
           <div className="row" >
 
@@ -19,17 +28,29 @@ const SectionThree = (props) =>{
 
             
 
-            <div  className="text-box col-md-6 col-sm-12 col-12">
-              <VideoPlayer 
-              src={Video} poster={poster} className="video"   
-              />
+            <div ref={myRef} className="text-box col-md-6 col-sm-12 col-12">
+              <img src={image_2} alt='img' ></img>
             </div>
 
-            <div  className="text-box col-md-6 col-sm-12 col-xs-12" >
+            <div  className="text-box col-md-6 col-sm-12 col-xs-12"  >
               <div className='png' ></div>
               <h2>{Description_2}</h2>
               <p>{text_2}</p>
-              <button className="section-3-button">Davami</button>
+
+              {
+                blog.map((blog,index) =>{
+    
+                const {name} = blog
+                if(name === technologyBlog){
+                  return(
+                    <Link to={{pathname:`/blog/${name}`, }} key={index} >
+                      <button className="section-3-button">Davami</button>
+                    </Link>
+                  )
+                  }
+                })
+              }
+              
             </div>
 
           </div>
@@ -40,12 +61,10 @@ const SectionThree = (props) =>{
         <div className="container">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-12 col-sm-12 section-3-for-mobile" >
+              <div className="col-md-12 col-sm-12 section-3-for-mobile" ref={myRef} >
                 
                 
-                  <VideoPlayer 
-                    src={videoSrc} poster={poster} className="video"   
-                  />
+                  <img src={image_2} alt='img' ></img>
                 
                 
                 <p>Hey dostlar, salam! Bu gün müxtəlif peşələr haqqında maraqlı bir kitab oxudum. 
@@ -53,7 +72,22 @@ const SectionThree = (props) =>{
                 Öyrəndim ki,  
                   
               </p>
-              <button className="section-3-button">Davami</button>
+
+                {
+                  blog.map((blog,index) =>{
+      
+                  const {name} = blog
+                  if(name === technologyBlog){
+                    return(
+                      <Link to={{pathname:`/blog/${name}`, }} key={index} >
+                        <button className="section-3-button">Davami</button>
+                      </Link>
+                    )
+                    }
+                  })
+                }
+
+              
               </div>
             </div>
           </div>

@@ -7,9 +7,11 @@ import insta from '../../images/saytisnta.png'
 import swp from '../../images/saytwp.png'
 import saytyoutube from '../../images/saytyoutube.png'
 import saytfb from '../../images/saytfb.png'
-import saytlinkedin from '../../images/saytlinkedin.png'
-import tiktoksayt from '../../images/tiktoksayt.png'
+// import saytlinkedin from '../../images/saytlinkedin.png'
+// import tiktoksayt from '../../images/tiktoksayt.png'
 import { send } from 'emailjs-com';
+import ReactWhatsapp from 'react-whatsapp';
+
 
 const FooterSection =(props) =>{
   // console.log(props)
@@ -18,18 +20,16 @@ const FooterSection =(props) =>{
     error: 'example@gmail.com'
   })
 
-  // const hadlerGetClientInfo = (event) =>{
-  //   event.preventDefault();
-  //   // setSubscribe(event.target.value)
-  //   setSubscribe({
-  //     email: event.target.value
-  //   })
-  // }
+ 
 
   const time = new Date()
-
+  
   
   function writeSubscribe(e){
+
+
+    
+
     e.preventDefault()
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     
@@ -171,33 +171,39 @@ const FooterSection =(props) =>{
               <div className="social-media">
                 <p>
                   <span
-                    onClick={() =>{
-                      window.open('https://www.instagram.com/enteskedu/', '_blank');
-                    }}
+                    onClick={() =>{<ReactWhatsapp number="077-347-20-63" message="Hello World!!!" />}}
                   >
                     <img src={swp} alt="img" />
                   </span>
-                  @enteskedu
+                  <a href="https://api.whatsapp.com/send?phone=9940773472063" >
+                    +994 077 347 20 63
+                  </a>
                 </p>
                 <p>
                   <span>
                     <img src={insta} alt="img" />
                   </span>
+                  <a href="https://www.instagram.com/enteskedu/" >
                   @enteskedu
+                  </a>
                 </p>
                 <p>
                   <span>
                      <img src={saytfb} alt="img" />
                   </span>
-                  @enteskedu
+                  <a href="https://www.facebook.com/enteskedu-103143677933426" >
+                    @enteskedu
+                  </a>
                 </p>
                 <p>
                   <span>
                      <img src={saytyoutube} alt="img" />
                   </span>
-                  @enteskedu
+                  <a href="https://www.youtube.com/channel/UCML2-bEpQ6NFKMIYUew_LBQ" >
+                    @enteskedu
+                  </a>
                 </p>
-                <p>
+                {/* <p>
                   <span>
                      <img src={tiktoksayt} alt="img" />
                   </span>
@@ -208,7 +214,7 @@ const FooterSection =(props) =>{
                      <img src={saytlinkedin} alt="img" />
                   </span>
                   @enteskedu
-                </p>
+                </p> */}
 
               </div>
               

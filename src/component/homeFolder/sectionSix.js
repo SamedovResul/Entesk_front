@@ -64,9 +64,9 @@ return(
                   const {id, img, name, text} =client
                   return(
                   <div key={id} className="client-box">
-                    <div className="circle-div" >
+                    {/* <div className="circle-div" >
                       <img src={img} alt="img"></img>
-                    </div>
+                    </div> */}
                     <div className="squer-div">
                       <p> {name} </p>
                       <p> {text} </p>
