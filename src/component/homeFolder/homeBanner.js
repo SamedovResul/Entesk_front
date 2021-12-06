@@ -250,7 +250,8 @@ const HomeBanner = (props) =>{
 
 			top: location? location.name === 'fromNavication' ? 
 			"-50%" : location.name === 'fromEnvironment' ? 
-			'-15%' : '30%' :  '30%'
+			'-15%' : '30%' :  '30%',
+			width: '15%'
 		},
 			config: {
 				duration: 500
@@ -309,7 +310,9 @@ const HomeBanner = (props) =>{
 
 			top: location? location.name === 'fromNavication' ? 
 					"-50%" : location.name === 'fromSkill' ? 
-					'-15%' : '30%' :  '30%'},
+					'-15%' : '30%' :  '30%',
+					width: '15%'
+				},
 			config: {
 				duration: 500
 			}
@@ -357,7 +360,9 @@ const HomeBanner = (props) =>{
 
 			top: location? location.name === 'fromNavication' ? 
 				"-50%" : location.name === 'fromTechnology' ? 
-				'-15%' : '30%' :  '30%',},
+				'-15%' : '30%' :  '30%',
+				width: '15%'
+			},
 			config: {
 				duration: 500
 			}

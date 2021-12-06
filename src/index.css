@@ -1897,6 +1897,11 @@ body {
 
 /*  section 3  */
 
+.img-box img{
+  width:100%;
+  height: auto;
+}
+
 .section-3-main-div {
   height: auto;
   display: flex;
@@ -2804,7 +2809,7 @@ body {
 
   .section-6-main-div .slick-center .squer-div {
     width: 90%;
-    height: 50%;
+    height: auto;
     border-radius: 55px;
   }
 }

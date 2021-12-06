@@ -769,32 +769,32 @@ export  const allData = {
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Rəsul Səmədov',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Tohida Xanım',
+			text: 'Hər iki qızım bir aya artıq sərbəst şəkildə kiçik oyunlar hazılayırlar. ',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Günay İmanzadə',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Humay Xanım',
+			text: 'Çox yaxşı ki, Sizi tapdıq. İmran çox böyük həvəslə robotları yığır və programlaşdırır.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Şahin Xalilov',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Nigar Xanım',
+			text: 'Oğlum Murad ingilis dili və robotika dərslərinə başladı. Nəticədən o qədər məmnun qaldım ki, digər iki qızlarımı da kurslara cəlb etdim.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Püstəxanim Abbasova',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Zeynəb Xanım',
+			text: 'İki ay ərzində Raul artıq sərbəst ingilis dilində oxuyur və danışır. Çox minnətdaram.',
 		},
 		{
 			id:uuid(),
 			img: '/images/Gunay.png',
-			name: 'Fərid İmanzadə',
-			text: 'the industry s standard dummy text ever since the 1500s,',
+			name: 'Emin Bəy',
+			text: 'Elm dərsləri oğlumun dünya görüşünə və təfəkkürünə çox müsbət təsir etdi. Çox bəyənirik.',
 		}
 	],
 

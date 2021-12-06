@@ -175,8 +175,8 @@ const FooterSection =(props) =>{
                   >
                     <img src={swp} alt="img" />
                   </span>
-                  <a href="https://api.whatsapp.com/send?phone=9940773472063" >
-                    +994 077 347 20 63
+                  <a href="https://api.whatsapp.com/send?phone=994558067669" >
+                    +994 55 806 76 69
                   </a>
                 </p>
                 <p>
