@@ -7,8 +7,8 @@ import insta from '../../images/saytisnta.png'
 import swp from '../../images/saytwp.png'
 import saytyoutube from '../../images/saytyoutube.png'
 import saytfb from '../../images/saytfb.png'
-// import saytlinkedin from '../../images/saytlinkedin.png'
-// import tiktoksayt from '../../images/tiktoksayt.png'
+import saytlinkedin from '../../images/saytlinkedin.png'
+import tiktoksayt from '../../images/tiktoksayt.png'
 import { send } from 'emailjs-com';
 import ReactWhatsapp from 'react-whatsapp';
 
@@ -203,18 +203,22 @@ const FooterSection =(props) =>{
                     @enteskedu
                   </a>
                 </p>
-                {/* <p>
+                <p>
                   <span>
                      <img src={tiktoksayt} alt="img" />
                   </span>
+                  <a href="https://www.instagram.com/enteskedu/" >
                   @enteskedu
+                  </a>
                 </p>
                 <p>
                   <span>
                      <img src={saytlinkedin} alt="img" />
                   </span>
+                  <a href="https://www.instagram.com/enteskedu/" >
                   @enteskedu
-                </p> */}
+                  </a>
+                </p>
 
               </div>
               
