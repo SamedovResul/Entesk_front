@@ -491,6 +491,12 @@ body {
 
 /* environment ---- */
 
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .click-div {
   cursor: pointer;
 }
@@ -1076,7 +1082,6 @@ body {
   height: unset;
   overflow: hidden;
   margin-bottom: 30px;
-  /* padding-right: 20px; */
 }
 
 .level-div {
@@ -1128,15 +1133,6 @@ body {
 }
 
 @media(max-width:665px) {
-  /* .section-3-main-div .environment-course {
-    width: 80%;
-    margin: auto;
-  }
-
-  .section-3-main-div .environment-desc {
-    width: 80%;
-    margin: auto;
-  } */
 
   .contentpng {
     width: 80%;
@@ -1329,6 +1325,8 @@ body {
 
 
 /* skill ------ */
+
+
 
 
 .skill-banner {
@@ -1897,8 +1895,8 @@ body {
 
 /*  section 3  */
 
-.img-box img{
-  width:100%;
+.img-box img {
+  width: 100%;
   height: auto;
 }
 

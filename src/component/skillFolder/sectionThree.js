@@ -17,7 +17,7 @@ const SectionThree = ({data,myRef,blog}) =>{
         <div className="container-fluid">
           <div className="row" >
             
-            <div ref={myRef} className="text-box col-md-6 col-sm-12 col-12">
+            <div ref={myRef} className="img-box col-md-6 col-sm-12 col-12">
               <img src={image_2} alt='img' ></img>
             </div>
 
@@ -29,9 +29,10 @@ const SectionThree = ({data,myRef,blog}) =>{
                 blog.map((blog,index) =>{
     
                 const {name} = blog
+                console.log(skillBlog)
                 if(name === skillBlog){
                   return(
-                    <Link to={{pathname:`/blog/${name}`, }} key={index} >
+                    <Link to={{pathname:`/blog/${name}`,}} key={index} >
                       <button className="section-3-button">Davami</button>
                     </Link>
                   )

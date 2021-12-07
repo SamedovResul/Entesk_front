@@ -25,7 +25,7 @@ const  SectionOne = ({data, executeScroll}) =>{
             <button  className="section-1-button" onClick={executeScroll} >Davamı</button>
             
           </div>
-          <div  className="text-box col-md-6 col-sm-12 col-12">
+          <div  className="img-box col-md-6 col-sm-12 col-12">
             <img src={image_1} alt='img' ></img>
           </div>
         </div>
